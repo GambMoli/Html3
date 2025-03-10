@@ -5,69 +5,371 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Mundo del Fútbol</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .news-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Pasión por el Fútbol</h1>
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <h1>Pasión por el Fútbol</h1>
+            </div>
             <nav>
-                <a href="#equipos">Equipos</a>
-                <a href="#jugadores">Jugadores</a>
-                <a href="#mundial">Mundial</a>
+                <a href="#equipos"><i class="fas fa-shield-alt"></i> Equipos</a>
+                <a href="#jugadores"><i class="fas fa-user"></i> Jugadores</a>
+                <a href="#mundial"><i class="fas fa-trophy"></i> Mundial</a>
+                <a href="#noticias"><i class="fas fa-newspaper"></i> Noticias</a>
             </nav>
         </header>
 
+        <div class="hero-section">
+            <div class="hero-content">
+                <h2>La Magia Del Balón Que Une Al Mundo</h2>
+                <p>Explora la historia, las leyendas y los momentos inolvidables del deporte más hermoso del planeta</p>
+                <button class="btn-primary"><i class="fas fa-futbol"></i> Únete a la Pasión</button>
+            </div>
+        </div>
+
         <div class="content-wrapper">
-            <section id="equipos">
-                <h2>Grandes Equipos del Mundo</h2>
-                <ol>
-                    <li>
-                        <strong>Real Madrid</strong>
-                        <img src="/assets/real.jpg" alt="Escudo del Real Madrid" width="200" height="150">
-                        <p>Uno de los clubes más <em>exitosos</em> de la historia.</p>
-                    </li>
-                    <li>
-                        <strong>Barcelona</strong>
-                        <img src="/assets/barca.jpg" alt="Escudo del Barcelona" width="200" height="150">
-                        <p>Conocido por su <span>estilo de juego único</span>.</p>
-                    </li>
-                </ol>
+            <section id="equipos" class="section-card">
+                <div class="section-header">
+                    <i class="fas fa-shield-alt icon-header"></i>
+                    <h2>Grandes Equipos del Mundo</h2>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-banner">
+                            <span class="team-rank">1</span>
+                            <img src="/assets/real.jpg" alt="Escudo del Real Madrid" class="team-logo">
+                        </div>
+                        <div class="team-info">
+                            <h3>Real Madrid</h3>
+                            <div class="team-stats">
+                                <span><i class="fas fa-trophy"></i> 14 Champions</span>
+                                <span><i class="fas fa-medal"></i> 35 Ligas</span>
+                            </div>
+                            <p>Uno de los clubes más <em>exitosos</em> de la historia con una tradición ganadora inigualable.</p>
+                            <button class="btn-secondary">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-banner">
+                            <span class="team-rank">2</span>
+                            <img src="/assets/barca.jpg" alt="Escudo del Barcelona" class="team-logo">
+                        </div>
+                        <div class="team-info">
+                            <h3>Barcelona</h3>
+                            <div class="team-stats">
+                                <span><i class="fas fa-trophy"></i> 5 Champions</span>
+                                <span><i class="fas fa-medal"></i> 27 Ligas</span>
+                            </div>
+                            <p>Conocido por su <span class="highlight">estilo de juego único</span> y su famosa cantera "La Masia".</p>
+                            <button class="btn-secondary">Ver más</button>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-banner">
+                            <span class="team-rank">3</span>
+                            <img src="/assets/bayern.jpg" alt="Escudo del Bayern Munich" class="team-logo">
+                        </div>
+                        <div class="team-info">
+                            <h3>Bayern Munich</h3>
+                            <div class="team-stats">
+                                <span><i class="fas fa-trophy"></i> 6 Champions</span>
+                                <span><i class="fas fa-medal"></i> 32 Bundesligas</span>
+                            </div>
+                            <p>El gigante alemán conocido por su <span class="highlight">eficiencia y dominio</span> en el fútbol europeo.</p>
+                            <button class="btn-secondary">Ver más</button>
+                        </div>
+                    </div>
+                </div>
             </section>
 
-            <section id="jugadores">
-                <h2>Jugadores Legendarios</h2>
-                <ul>
-                    <li>
-                        <strong>Lionel Messi</strong>
-                        <img src="/assets/cris.jpg" alt="Lionel Messi" width="200" height="250">
-                        <p>Considerado uno de los mejores jugadores de todos los tiempos.</p>
-                        <a href="https://es.wikipedia.org/wiki/Lionel_Messi" target="_blank">Más información</a>
-                    </li>
-                    <li>
-                        <strong>Cristiano Ronaldo</strong>
-                        <img src="/assets/messi.jpg" alt="Cristiano Ronaldo" width="200" height="250">
-                        <p>Conocido por su increíble técnica y goles.</p>
-                        <a href="https://es.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank">Más información</a>
-                    </li>
-                </ul>
+            <section id="jugadores" class="section-card">
+                <div class="section-header">
+                    <i class="fas fa-user icon-header"></i>
+                    <h2>Jugadores Legendarios</h2>
+                </div>
+                <div class="players-carousel">
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/assets/messi.jpg" alt="Lionel Messi" class="player-image">
+                            <div class="player-overlay">
+                                <div class="player-stats">
+                                    <span>Goles: 800+</span>
+                                    <span>Asistencias: 350+</span>
+                                    <span>Balones de Oro: 8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-info">
+                            <h3>Lionel Messi</h3>
+                            <p class="player-description">Considerado uno de los mejores jugadores de todos los tiempos, con una técnica y visión sin igual.</p>
+                            <a href="https://es.wikipedia.org/wiki/Lionel_Messi" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/assets/cris.jpg" alt="Cristiano Ronaldo" class="player-image">
+                            <div class="player-overlay">
+                                <div class="player-stats">
+                                    <span>Goles: 850+</span>
+                                    <span>Asistencias: 230+</span>
+                                    <span>Balones de Oro: 5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-info">
+                            <h3>Cristiano Ronaldo</h3>
+                            <p class="player-description">Conocido por su increíble técnica, potencia física y capacidad goleadora excepcional.</p>
+                            <a href="https://es.wikipedia.org/wiki/Cristiano_Ronaldo" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="player-card">
+                        <div class="player-image-container">
+                            <img src="/assets/pele.jpg" alt="Pelé" class="player-image">
+                            <div class="player-overlay">
+                                <div class="player-stats">
+                                    <span>Goles: 1200+</span>
+                                    <span>Mundiales: 3</span>
+                                    <span>Leyenda: Eterna</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="player-info">
+                            <h3>Pelé</h3>
+                            <p class="player-description">El Rey del Fútbol, único jugador en ganar tres Copas del Mundo y revolucionar el deporte.</p>
+                            <a href="https://es.wikipedia.org/wiki/Pelé" target="_blank" class="btn-link">
+                                <i class="fas fa-external-link-alt"></i> Más información
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
             </section>
 
-            <section id="mundial">
-                <h2>Copa Mundial de la FIFA</h2>
-                <img src="/assets/copa.jpg" alt="Copa Mundial de Fútbol" width="600" height="400">
-                <p>La competición internacional más importante del fútbol.</p>
-                <p>Algunos países ganadores:</p>
-                <ul>
-                    <li>Brasil (5 títulos)</li>
-                    <li>Alemania (4 títulos)</li>
-                    <li>Argentina (3 títulos)</li>
-                </ul>
+            <section id="mundial" class="section-card">
+                <div class="section-header">
+                    <i class="fas fa-trophy icon-header"></i>
+                    <h2>Copa Mundial de la FIFA</h2>
+                </div>
+                <div class="world-cup-content">
+                    <div class="world-cup-image">
+                        <img src="/assets/copa.jpg" alt="Copa Mundial de Fútbol" class="trophy-image">
+                    </div>
+                    <div class="world-cup-info">
+                        <p class="world-cup-description">La competición internacional más importante del fútbol, celebrada cada cuatro años desde 1930.</p>
+                        <h3>Países Campeones</h3>
+                        <div class="champions-grid">
+                            <div class="champion-card brazil">
+                                <img src="/assets/brazil.jpg" alt="Brasil" class="flag">
+                                <h4>Brasil</h4>
+                                <div class="trophies">
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <p>1958, 1962, 1970, 1994, 2002</p>
+                            </div>
+                            <div class="champion-card germany">
+                                <img src="/assets/germany.jpg" alt="Alemania" class="flag">
+                                <h4>Alemania</h4>
+                                <div class="trophies">
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <p>1954, 1974, 1990, 2014</p>
+                            </div>
+                            <div class="champion-card argentina">
+                                <img src="/assets/argentina.jpg" alt="Argentina" class="flag">
+                                <h4>Argentina</h4>
+                                <div class="trophies">
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <p>1978, 1986, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="noticias" class="section-card">
+                <div class="section-header">
+                    <i class="fas fa-newspaper icon-header"></i>
+                    <h2>Últimas Noticias</h2>
+                </div>
+                <div class="news-grid">
+                    <article class="news-card">
+                        <div class="news-image" style="background-image: url('/assets/news1.jpg');">
+                            <span class="news-category">Champions League</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>Final histórica en Wembley</h3>
+                            <p class="news-date"><i class="far fa-calendar-alt"></i> 10 de marzo, 2025</p>
+                            <p class="news-excerpt">El partido decisivo promete ser uno de los más emocionantes de la última década con estrellas...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-image" style="background-image: url('/assets/news2.jpg');">
+                            <span class="news-category">Fichajes</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>El mercado de verano se calienta</h3>
+                            <p class="news-date"><i class="far fa-calendar-alt"></i> 8 de marzo, 2025</p>
+                            <p class="news-excerpt">Los grandes clubes europeos comienzan a moverse para reforzar sus plantillas de cara a la próxima...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-image" style="background-image: url('/assets/news3.jpg');">
+                            <span class="news-category">La Liga</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>El clásico definirá el título</h3>
+                            <p class="news-date"><i class="far fa-calendar-alt"></i> 5 de marzo, 2025</p>
+                            <p class="news-excerpt">A falta de cinco jornadas, el Barcelona y el Real Madrid se enfrentarán en un partido que podría...</p>
+                            <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <button class="btn-primary load-more">Cargar más noticias</button>
             </section>
         </div>
 
+        <section class="newsletter">
+            <div class="newsletter-content">
+                <i class="fas fa-envelope newsletter-icon"></i>
+                <h2>¡Suscríbete a nuestro boletín!</h2>
+                <p>Recibe las últimas noticias y actualizaciones del mundo del fútbol directamente en tu correo.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn-primary">Suscribirse</button>
+                </form>
+            </div>
+        </section>
+
         <footer>
-            <p>© 2024 Pasión por el Fútbol</p>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-futbol"></i>
+                    <h3>Pasión por el Fútbol</h3>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#equipos">Equipos</a></li>
+                            <li><a href="#jugadores">Jugadores</a></li>
+                            <li><a href="#mundial">Mundial</a></li>
+                            <li><a href="#noticias">Noticias</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Competiciones</h4>
+                        <ul>
+                            <li><a href="#">Champions League</a></li>
+                            <li><a href="#">Liga</a></li>
+                            <li><a href="#">Copa del Rey</a></li>
+                            <li><a href="#">Premier League</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Síguenos</h4>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Pasión por el Fútbol - Todos los derechos reservados</p>
+            </div>
         </footer>
     </div>
+
+    <script>
+        // Simple carousel functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.players-carousel');
+            const prevBtn = document.querySelector('.carousel-btn.prev');
+            const nextBtn = document.querySelector('.carousel-btn.next');
+            const cards = document.querySelectorAll('.player-card');
+            let currentIndex = 0;
+
+            // Show cards function
+            function showCards() {
+                cards.forEach((card, index) => {
+                    card.style.display = index === currentIndex ? 'block' : 'none';
+                });
+            }
+
+            showCards();
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+                showCards();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % cards.length;
+                showCards();
+            });
+
+
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+
+            const teamCards = document.querySelectorAll('.team-card');
+            teamCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.classList.add('hovered');
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.classList.remove('hovered');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
